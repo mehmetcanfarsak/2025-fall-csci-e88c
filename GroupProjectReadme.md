@@ -59,6 +59,10 @@ The following KPIs are calculated by the project:
 4.  **Run the Spark Job**: Go into the bash of the container and submit the Spark job using the `spark-submit` command:
 
     ```bash
+    docker compose -f docker-compose-spark.yml  up -d
+    ```
+
+    ```bash
     docker exec -it spark-master /bin/bash
     ```
 
