@@ -5,9 +5,12 @@ import org.cscie88c.core.Utils
 
 object SparkClusterJob {
   def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder()
+    val spark = SparkSession
+      .builder()
       .appName("ClusterSparkJob")
-      .master("spark://spark-master:7077")  // connect to local Spark master in Docker
+      .master(
+        "spark://spark-master:7077"
+      ) // connect to local Spark master in Docker
       .config("spark.executor.memory", "1g")
       .config("spark.driver.host", "localhost")
       .getOrCreate()

@@ -12,6 +12,6 @@ object KafkaClient {
   // sends a status message to kafka
   def sendStatusEvent(status: String)(implicit kafkaProducer: KafkaProducer) = {
     kafkaProducer.send(status) // use the implicit KafkaProducer provided
-  }  
+  }
 }
-*/
+ */

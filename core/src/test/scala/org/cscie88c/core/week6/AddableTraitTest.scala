@@ -1,6 +1,6 @@
 package org.cscie88c.core.week6
 
-import org.cscie88c.core.testutils.{ StandardTest }
+import org.cscie88c.core.testutils.{StandardTest}
 
 class AddableTraitTest extends StandardTest {
 
@@ -13,5 +13,5 @@ class AddableTraitTest extends StandardTest {
     "add two MyBool values correctly" in {
       // add your unit tests for MyBool below
     }
-   } 
+  }
 }

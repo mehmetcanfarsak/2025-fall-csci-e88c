@@ -7,7 +7,7 @@ import scala.util.Random
 import scala.collection.parallel.CollectionConverters._
 
 object FutureUtils {
-  
+
   val rnd = new Random()
 
   def creditScoreAPI(applicantId: Int): Future[Int] = ???

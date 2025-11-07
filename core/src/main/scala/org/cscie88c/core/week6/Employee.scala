@@ -9,5 +9,5 @@ object Employee {
   def defaultSortEmployees(employees: List[Employee]): List[Employee] = ???
 
   def sortEmployeesBySalary(employees: List[Employee]): List[Employee] = ???
-  
+
 }

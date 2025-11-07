@@ -1,6 +1,6 @@
 package org.cscie88c.core.week5
 
-import org.cscie88c.core.testutils.{ StandardTest }
+import org.cscie88c.core.testutils.{StandardTest}
 import FunctionUtils.CustomerTransaction
 
 // run using: sbt "testOnly org.cscie88c.week5.FunctionUtilsTest"
@@ -24,7 +24,7 @@ class FunctionUtilsTest extends StandardTest {
         // write unit tests here
       }
     }
-    
+
     // Problem 2 unit tests
 
     // Problem 3 unit tests

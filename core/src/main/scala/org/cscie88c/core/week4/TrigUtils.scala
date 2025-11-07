@@ -9,5 +9,5 @@ object TrigUtils {
 
   // use the placeholder syntax for squared
   val squared: Double => Double = ???
-  
+
 }

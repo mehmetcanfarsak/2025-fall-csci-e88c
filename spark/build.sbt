@@ -2,7 +2,7 @@ name := "spark"
 
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % "3.5.1" % Provided,
-  "org.apache.spark" %% "spark-sql"  % "3.5.1" % Provided
+  "org.apache.spark" %% "spark-sql" % "3.5.1" % Provided
 )
 
 Compile / mainClass := Some("org.cscie88c.spark.SparkJob")

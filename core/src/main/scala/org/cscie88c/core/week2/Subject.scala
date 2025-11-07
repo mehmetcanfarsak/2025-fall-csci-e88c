@@ -7,5 +7,5 @@ object Subject {
   val allSubjects: List[Subject] = ???
 
   def stemSubjects: List[Subject] = ???
-  
+
 }

@@ -4,7 +4,7 @@ import scala.io.Source
 import scala.util.{Try, Success, Failure}
 
 object OptionUtils {
-  
+
   def fileCharCount(fileName: String): Try[Long] = ???
 
   def charCountAsString(fileName: String): String = ???

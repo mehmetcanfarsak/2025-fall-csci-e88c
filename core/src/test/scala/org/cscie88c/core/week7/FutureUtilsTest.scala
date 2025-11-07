@@ -4,7 +4,7 @@ import org.cscie88c.core.testutils.{FuturesTest}
 import scala.concurrent.Future
 
 class FutureUtilsTest extends FuturesTest {
-  
+
   "Any future function" should {
     "return a future assertion" in {
       def futureAdd2(x: Int) = Future(x + 2)

@@ -6,8 +6,8 @@ import org.scalacheck._
 
 class StudentPropertyTest
     extends AnyFunSuite
-       with Matchers
-       with ScalaCheckPropertyChecks {
+    with Matchers
+    with ScalaCheckPropertyChecks {
 
   val studentGen: Gen[Student] = ???
 

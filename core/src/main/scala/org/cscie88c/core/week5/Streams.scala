@@ -19,5 +19,4 @@ object Streams {
 
   def averageHealthyAge(allDogs: LazyList[Dog], sampleSize: Int): Double = ???
 
-
 }

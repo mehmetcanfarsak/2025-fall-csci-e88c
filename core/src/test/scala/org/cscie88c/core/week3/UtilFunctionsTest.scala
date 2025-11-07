@@ -1,6 +1,6 @@
 package org.cscie88c.core.week3
 
-import org.cscie88c.core.testutils.{ StandardTest }
+import org.cscie88c.core.testutils.{StandardTest}
 
 class UtilFunctionsTest extends StandardTest {
   "UtilFunctions" when {

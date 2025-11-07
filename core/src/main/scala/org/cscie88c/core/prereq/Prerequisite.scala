@@ -9,10 +9,10 @@ object Prerequisite {
   def fromCSV(csvFile: String): List[CustomerTransaction] = {
     Using.resource(Source.fromFile(csvFile)) { source =>
       source
-      .getLines()
-      .drop(1) // drop header
-      .map(CustomerTransaction.apply)
-      .toList
+        .getLines()
+        .drop(1) // drop header
+        .map(CustomerTransaction.apply)
+        .toList
     }
   }
 
@@ -51,4 +51,3 @@ object Prerequisite {
     }
   }
 }
-

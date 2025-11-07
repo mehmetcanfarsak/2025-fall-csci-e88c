@@ -5,7 +5,8 @@ import org.cscie88c.core.Utils
 
 object SparkJob {
   def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder()
+    val spark = SparkSession
+      .builder()
       .appName("SampleSparkJob")
       .master("local[*]")
       .getOrCreate()
