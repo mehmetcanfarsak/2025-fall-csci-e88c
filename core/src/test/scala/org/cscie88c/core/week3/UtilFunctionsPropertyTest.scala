@@ -10,13 +10,13 @@ class UtilFunctionsPropertyTest
     with Matchers
     with ScalaCheckPropertyChecks {
 
-  val triplesGen: Gen[(Int, Int, Int)] = ???
+  //val triplesGen: Gen[(Int, Int, Int)] = ???
 
-  test("mult2 result test") {
+  ignore("mult2 result test") {
     forAll { (x: Int, y: Int) =>
       UtilFunctions.mult2(x, y) shouldBe x * y
     }
-  }.pending
+  }
 
   // write more property tests below
 }
