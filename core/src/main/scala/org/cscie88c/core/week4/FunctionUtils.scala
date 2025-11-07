@@ -1,7 +1,7 @@
 package org.cscie88c.core.week4
 
 object FunctionUtils {
-  
+
   // complete the implementation of the higher order functions below
   def applyNtimes(n: Int)(x: Int)(f: Int => Int): Int = ???
 

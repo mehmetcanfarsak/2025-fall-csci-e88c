@@ -4,6 +4,4 @@ import org.cscie88c.core.testutils.{StandardTest}
 
 // write unit tests for Subject below
 
-class SubjectTest extends StandardTest {
-  
-}
+class SubjectTest extends StandardTest {}

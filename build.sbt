@@ -8,8 +8,8 @@ val pureconfigVersion = "0.15.0"
 val catsVersion = "2.2.0"
 
 lazy val scalaTest = Seq(
-    "org.scalatest" %% "scalatest" % "3.2.19" % Test,
-    "org.scalatestplus" %% "scalacheck-1-18" % "3.2.19.0" % Test
+  "org.scalatest" %% "scalatest" % "3.2.19" % Test,
+  "org.scalatestplus" %% "scalacheck-1-18" % "3.2.19.0" % Test
 )
 
 lazy val commonDependencies = Seq(
@@ -30,46 +30,46 @@ lazy val commonDependencies = Seq(
   "ch.qos.logback" % "logback-classic" % "1.2.3",
 
   // parallel collections
-  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
+  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4"
 )
 
 // common settings
 lazy val commonSettings = Seq(
-    scalaVersion := "2.13.16",
-    semanticdbEnabled := true,
-    semanticdbVersion := scalafixSemanticdb.revision,
-    scalacOptions ++= Seq(
-      "-feature",
-      "-deprecation",
-      "-unchecked",
-      "-language:postfixOps",
-      "-language:higherKinds", // HKT required for Monads and other HKT types
-      "-Wunused", // for scalafix
-      "-Wunused:imports", // for scalafix
-      "-Yrangepos"
-    ),
-    Compile / run / fork := true, // cleaner to run programs in a JVM different from sbt
-    Compile / discoveredMainClasses := Seq(), // ignore discovered main classes
-    // needed to run Spark with Java 17
-    run / javaOptions ++= Seq(
-      "--add-exports=java.base/sun.nio.ch=ALL-UNNAMED",
-      "--add-opens=java.base/java.util=ALL-UNNAMED",
-      "--add-opens=java.base/java.lang=ALL-UNNAMED",
-      "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED"
-    ),
-    libraryDependencies ++= commonDependencies,
-    libraryDependencies ++= scalaTest,
+  scalaVersion := "2.13.16",
+  semanticdbEnabled := true,
+  semanticdbVersion := scalafixSemanticdb.revision,
+  scalacOptions ++= Seq(
+    "-feature",
+    "-deprecation",
+    "-unchecked",
+    "-language:postfixOps",
+    "-language:higherKinds", // HKT required for Monads and other HKT types
+    "-Wunused", // for scalafix
+    "-Wunused:imports", // for scalafix
+    "-Yrangepos"
+  ),
+  Compile / run / fork := true, // cleaner to run programs in a JVM different from sbt
+  Compile / discoveredMainClasses := Seq(), // ignore discovered main classes
+  // needed to run Spark with Java 17
+  run / javaOptions ++= Seq(
+    "--add-exports=java.base/sun.nio.ch=ALL-UNNAMED",
+    "--add-opens=java.base/java.util=ALL-UNNAMED",
+    "--add-opens=java.base/java.lang=ALL-UNNAMED",
+    "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED"
+  ),
+  libraryDependencies ++= commonDependencies,
+  libraryDependencies ++= scalaTest
 )
 
 lazy val dockerSettings = Seq(
   dockerBaseImage := "docker.io/library/eclipse-temurin:17-jre",
-  Docker / version := "latest",
+  Docker / version := "latest"
 )
 
 lazy val core = project
   .in(file("core"))
   .settings(
-    commonSettings,
+    commonSettings
     // Core library settings
   )
 
@@ -82,7 +82,7 @@ lazy val cli = project
 lazy val spark = project
   .in(file("spark"))
   .settings(
-    commonSettings,
+    commonSettings
     // Spark module settings)
   )
   .dependsOn(core)
@@ -91,7 +91,7 @@ lazy val spark = project
 lazy val beam = project
   .in(file("beam"))
   .settings(
-    commonSettings,
+    commonSettings
     // Beam module settings
   )
   .dependsOn(core)
@@ -102,7 +102,7 @@ lazy val root = (project in file("."))
   .settings(
     commonSettings,
     name := "multi-module-project",
-    description := "A multi-module project for Scala and Big data frameworks like Spark, Beam, and Kafka",
+    description := "A multi-module project for Scala and Big data frameworks like Spark, Beam, and Kafka"
   )
 
 // Custom task to zip files for homework submission

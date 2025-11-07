@@ -78,11 +78,9 @@ object TaxiDataAnalyzeMainJob {
         case path1 :: path2 :: path3 :: start :: end :: Nil =>
           (path1, path2, path3, Some(start.toInt), Some(end.toInt))
         case _ =>
-          System.err.println(
+          throw new IllegalArgumentException(
             "Usage: <tripDataPath> <zoneLookupPath> <outpath> [start_week] [end_week]"
           )
-          System.exit(1)
-          (null, null, null, None, None) // To satisfy compiler
       }
 
     implicit val spark = SparkSession

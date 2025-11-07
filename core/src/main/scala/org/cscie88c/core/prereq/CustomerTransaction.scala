@@ -1,9 +1,9 @@
 package org.cscie88c.core.prereq
 
 final case class CustomerTransaction(
-  customerId: String,
-  transactionDate: String,
-  transactionAmount: Double
+    customerId: String,
+    transactionDate: String,
+    transactionAmount: Double
 )
 
 object CustomerTransaction {

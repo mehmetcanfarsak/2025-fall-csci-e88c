@@ -5,7 +5,7 @@ final case class Student(
     email: String,
     subject: String,
     score: Int
-  ) {
+) {
   def description: String =
     s"name: ${name}, email: ${email}, subject: ${subject}, score: ${score}"
 }
@@ -17,10 +17,10 @@ object Student {
   def averageScoreBySubject(
       subject: String,
       studentList: List[Student]
-    ): Double = ???
+  ): Double = ???
 
   def averageScoreByStudent(
       student: Student,
       studentList: List[Student]
-    ): Double = ???
+  ): Double = ???
 }
