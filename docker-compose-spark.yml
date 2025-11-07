@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   spark-master:
     image: esumitra/cluster-apache-spark:3.2.1
@@ -8,20 +10,29 @@ services:
     ports:
       - "7077:7077"
       - "8080:8080"
+      - "4040:4040"
+
     volumes:
       - ./data:/opt/spark-data
       - ./docker/apps/spark:/opt/spark-apps
+    networks:
+      - spark-network
 
   spark-worker:
     image: esumitra/cluster-apache-spark:3.2.1
-    container_name: spark-worker
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
     depends_on:
       - spark-master
     ports:
-      - "8081:8081"
+      - "8081"
     volumes:
       - ./data:/opt/spark-data
       - ./docker/apps/spark:/opt/spark-apps
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
+    driver: bridge
