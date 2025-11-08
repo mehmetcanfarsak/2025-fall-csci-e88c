@@ -64,7 +64,6 @@ case class NightTripPercentageByBorough(
 // Usage: spark-submit --class <main-class> <jar-file> <trip-data-path> <zone-lookup-path> <output-path> [start_week] [end_week]
 // Some examples:
 //     /opt/spark/bin/spark-submit --class org.cscie88c.spark.TaxiDataAnalyzeMainJob /path/to/jar /path/to/trips.parquet /path/to/taxi_zone_lookup.csv /path/to/output 1 4
-//     /opt/spark/bin/spark-submit --class org.cscie88c.spark.TaxiDataAnalyzeMainJob /opt/spark-apps/SparkJob.jar /opt/spark-data/green_tripdata_2024-01.parquet /opt/spark-data/taxi_zone_lookup.csv /opt/spark-data/output 1 4
 //     /opt/spark/bin/spark-submit --class org.cscie88c.spark.TaxiDataAnalyzeMainJob /opt/spark-apps/SparkJob.jar /opt/spark-data/yellow_tripdata_2025-01.parquet /opt/spark-data/taxi_zone_lookup.csv /opt/spark-data/output 1 4
 // OR
 // Create a batch job on GCP Dataproc with similar parameters. See https://cloud.google.com/dataproc-serverless/docs/overview
