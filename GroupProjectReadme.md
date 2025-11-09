@@ -79,6 +79,24 @@ The following KPIs are calculated by the project:
 
     The last two arguments (`1` and `4`) are optional and specify the start and end week for the analysis.
 
+## Testing
+
+This project uses ScalaTest for unit and integration testing to ensure the correctness and reliability of the data processing logic. The tests are organized into different suites that cover various components of the application:
+
+*   **`DataTransformsSpec.scala`**: Contains unit tests for data loading and transformation functions, such as `prepareDataForKPIs` and `filterByWeek`.
+*   **`KPICalculationsSpec.scala`**: Includes unit tests for each KPI calculation to verify the aggregation logic.
+*   **`TaxiDataAnalyzeMainJobSpec.scala`**: Provides tests for the main job's helper functions (`loadInputFile`, `cleanData`, `saveKPI`) and includes an end-to-end integration test for the `main` function itself.
+
+### How to Run the Tests
+
+You can run the entire test suite for the Spark module using the following `sbt` command:
+
+```bash
+sbt spark/test
+```
+
+This will execute all the tests and report the results in the console.
+
 ## Project Structure
 
 *   `spark/src/main/scala/org/cscie88c/spark/`: This directory contains the Scala source code for the Spark application.
