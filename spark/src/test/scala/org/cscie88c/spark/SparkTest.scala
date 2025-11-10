@@ -1,4 +1,3 @@
-
 package org.cscie88c.spark
 
 import org.apache.spark.sql.SparkSession

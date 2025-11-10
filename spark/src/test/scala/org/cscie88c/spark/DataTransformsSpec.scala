@@ -73,12 +73,49 @@ class DataTransformsSpec extends AnyFunSuite with Matchers with SparkTest {
 
     // Sample trip data
     val tripData = Seq(
-      (1, "2025-01-01 00:00:00", "2025-01-01 00:15:00", 1, 1.0, 1, 1, 1, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
+      (
+        1,
+        "2025-01-01 00:00:00",
+        "2025-01-01 00:15:00",
+        1,
+        1.0,
+        1,
+        1,
+        1,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      )
     ).toDF(
-      "VendorID", "tpep_pickup_datetime", "tpep_dropoff_datetime", "passenger_count", "trip_distance",
-      "RatecodeID", "store_and_fwd_flag", "PULocationID", "DOLocationID", "payment_type", "fare_amount",
-      "extra", "mta_tax", "tip_amount", "tolls_amount", "improvement_surcharge", "total_amount",
-      "congestion_surcharge", "Airport_fee", "cbd_congestion_fee"
+      "VendorID",
+      "tpep_pickup_datetime",
+      "tpep_dropoff_datetime",
+      "passenger_count",
+      "trip_distance",
+      "RatecodeID",
+      "store_and_fwd_flag",
+      "PULocationID",
+      "DOLocationID",
+      "payment_type",
+      "fare_amount",
+      "extra",
+      "mta_tax",
+      "tip_amount",
+      "tolls_amount",
+      "improvement_surcharge",
+      "total_amount",
+      "congestion_surcharge",
+      "Airport_fee",
+      "cbd_congestion_fee"
     )
 
     // Sample zone data
@@ -92,12 +129,36 @@ class DataTransformsSpec extends AnyFunSuite with Matchers with SparkTest {
 
     // Check if the required columns are present
     val expectedColumns = Seq(
-      "VendorID", "tpep_pickup_datetime", "tpep_dropoff_datetime", "passenger_count", "trip_distance",
-      "RatecodeID", "store_and_fwd_flag", "PULocationID", "DOLocationID", "payment_type", "fare_amount",
-      "extra", "mta_tax", "tip_amount", "tolls_amount", "improvement_surcharge", "total_amount",
-      "congestion_surcharge", "Airport_fee", "cbd_congestion_fee", "pickup_timestamp", "dropoff_timestamp",
-      "trip_duration_minutes", "week", "pickup_borough", "pickup_zone", "pickup_service_zone",
-      "dropoff_borough", "dropoff_zone", "dropoff_service_zone"
+      "VendorID",
+      "tpep_pickup_datetime",
+      "tpep_dropoff_datetime",
+      "passenger_count",
+      "trip_distance",
+      "RatecodeID",
+      "store_and_fwd_flag",
+      "PULocationID",
+      "DOLocationID",
+      "payment_type",
+      "fare_amount",
+      "extra",
+      "mta_tax",
+      "tip_amount",
+      "tolls_amount",
+      "improvement_surcharge",
+      "total_amount",
+      "congestion_surcharge",
+      "Airport_fee",
+      "cbd_congestion_fee",
+      "pickup_timestamp",
+      "dropoff_timestamp",
+      "trip_duration_minutes",
+      "week",
+      "pickup_borough",
+      "pickup_zone",
+      "pickup_service_zone",
+      "dropoff_borough",
+      "dropoff_zone",
+      "dropoff_service_zone"
     )
     preparedData.columns should contain theSameElementsAs expectedColumns
 
